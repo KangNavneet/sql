@@ -1,0 +1,21 @@
+/* WITH NATURAL JOIN-----Remember e_no --Column Name must be same*/
+1)Select EName from Emp,Dept where Emp.e_no=Dept.e_no
+Select EName from Emp Natural Join Dept
+
+/*SELF JOIN*/
+2)SELECT __________ FROM Emp as T1,Emp as T2 where T1.e_no =T2.e_no and T1.e_no<>T2.e_no
+SELECT T1.e_no FROM Emp as T1,Emp as T2 where T1.e_no =T2.e_no and T1.e_no<>T2.e_no
+
+/*Equi Join*/
+3)Select EName from Emp,Dept where Emp.e_no=Dept.e_no and Emp.address=Dept.location
+
+First of all CROSS PRODUCT----------  from EMP,Dept
+Second:where COMMON PK =Fk
+Third:Condition
+
+/*LEFT OUTER JOIN
+4)Select emp_no,EName,dept_no,loc from emp left outer join dept on emp.dept_no=dept.dept_no
+
+/*INNER JOIN*/
+5)query="select * from users INNER JOIN friends on friends.friendmail=users.email  and  friends.email='"+request.session["email"]+"'";
+
