@@ -1,0 +1,33 @@
+1)select orderDate,Count(orderId) 
+from sales.salesOrder
+where status='Shipped'
+group By orderDate
+Having Count(orderId)>1
+Order By orderDate DESC
+
+
+2)Select FatherName as FN ,motherName as MN from humanity.family
+
+3)CAST: CAST ONE DATATYPE TO ANOTHER
+
+Select CAST(productId as varchar(5)) +":" + name AS ProductName from sales.Products
+
+4)Convert
+
+
+Select CONVERT(varchar(5),productId) +":" + name AS ProductName from sales.Products
+
+5)IsNull
+Select Name,ISNULL(Try_Cast(Size As Integer),0) As NumericSize from sales.Products
+
+6)NULLIF
+
+7)Coalesce
+
+8)Searched Case In Sql
+Select Name,
+Case Size
+When 'S' Then 'SMALL'
+WHEN 'M' Then 'Medium'
+
+
